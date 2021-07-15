@@ -1,0 +1,278 @@
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 10px;
+  float: left;
+  width: 300px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: white;
+  padding: 10px;
+  display:inline-block;
+  box-sizing: border-box;
+}
+body {
+ /* background-color: #f1f1f1;*/
+  margin: 0;
+  font-family: Arial;
+  font-size: 18px;
+  background-color: seashell;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.button-gallery{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+h1{
+    text-align: center;
+    word-break: break-all;
+}
+.imagenes{
+  margin: 150px;
+  font-size: 15px;
+}
+.gallery:hover {opacity: 0.7;}
+
+
+.modal {
+    display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content{
+    margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+
+
+.close {
+    position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;}
+
+.modal-content, #caption {   
+  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.barra-top{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(62, 145, 201);
+    opacity: 90%;
+}
+.btn1{
+    padding: 10px 30px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(34,107,183);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+
+</style>
+
+</head>
+<body>
+  <header>
+    <div class="barra-top">
+           
+      <div class="title"><h1>Imagenes creadas por una IA</h1></div>
+                  
+      <div class="button-gallery">
+          <button id="btn1" class="btn1" onclick="location='index.html'" >Home</button>
+          <button id="btn1" class="btn1" onclick="location='gallery.html'" >Galería</button>
+          <button id="btn1" class="btn1" onclick="location='informacion.html'" >Información</button>   
+      </div>    
+  </div>
+  </header>
+  <article>
+    <section class="imagenes">
+      <div class="gallery">
+          <img src="imagenes/sunset van gogh style 2.png" alt="sunset van gogh style"  onclick="onClick(this)" class="modal-hover-opacity">
+
+      </div>
+  
+      <div class="gallery">
+          <img src="imagenes/Multiverse galaxy.png" alt="Forest" onclick="onClick(this)" class="modal-hover-opacity">
+
+      </div>
+  
+      <div id="modal01" class="modal" onclick="this.style.display='none'">
+          <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          <div class="modal-content">
+            <img id="img01" style="max-width:100%">
+          </div>
+        </div>
+  
+      <div class="gallery">
+          <img src="imagenes/forest.png" alt="Northern Lights" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+  
+      <div class="gallery">
+          <img src="imagenes/a fantasy sea monster 2.png" alt="Mountains" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+      <div class="gallery">
+          <img src="imagenes/alien ginger style.png" alt="Mountains" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+  
+      <div class="gallery">
+          <img src="imagenes/a fantasy sea.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+      <div class="gallery">
+          <img src="imagenes/bismuth galaxy nebula.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+      <div class="gallery">
+        <img src="imagenes/bismuth galaxy nebula.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+
+        </div>
+        <div class="gallery">
+          <img src="imagenes/2.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+        </a>
+
+      </div>
+      <div class="gallery">
+        <img src="imagenes/forest green.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+    </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/65.PNG" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+    </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/43.PNG" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/23.PNG" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/descarga (1).png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/summer sunset van gogh style.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/a fantasy sea monster galaxy.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/E6SebSfVEAIHOw8.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/E6Seh7IVgAE5rYC.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/QmZF6pixWzMT4USjGqkenTfXE2zBnYVori5fUorAU2dREM.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+      </div>
+      <div class="gallery">
+        <img src="imagenes/QmV8ZpG6DAb1FeyCWzBf2deCWkGaHz9z1EVyFvifzNXLUY.png" alt="Northern Lights" width="400" height="400" onclick="onClick(this)" class="modal-hover-opacity">
+      </a>
+      </div>
+
+  </section>
+  </article>
+
+<script>
+    function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+}
+</script>
+</body>
+</html>

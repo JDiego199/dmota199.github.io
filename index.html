@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="clase.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        
+        <div class="barra-top">
+           
+            <div class="title"><h1>Imagenes creadas por una IA</h1></div>
+                        
+            <div class="button-gallery">
+                <button id="btn1" class="btn1" onclick="location='index.html'" >Home</button>
+                <button id="btn1" class="btn1" onclick="location='gallery.html'" >Galería</button>
+                <button id="btn1" class="btn1" onclick="location='informacion.html'" >Información</button>   
+            </div>    
+        </div>
+        <div class="image">
+            <img src="imagenes/Live-Background.svg" alt="" style="width: 100%;  height: 345px; 
+            top: 0;">
+        </div>
+       
+    </header>
+    
+   <!-- <nav>
+        <ul>
+            <li>enlace 1</li>
+            <li><a href="https://www.espoch.edu.ec/">espoch</a></li>
+            <li>enlace 3</li>
+        </ul>
+    </nav>-->
+    <main>
+        <section >
+            <img class="mySlides" src="imagenes/2.png" >
+            <img class="mySlides" src="imagenes/a fantasy sea 2.png" >
+            <img class="mySlides" src="imagenes/a fantasy sea monster 1.png">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </section><br><br>
+        <section>
+            <div class="imagenes">
+                <div >
+                    <img src="imagenes/2.png" alt="" class="imagenes-1">
+                    <h2 class="text-img1"><b>A fantasy forest and river with roses</b></h2>   
+                </div> 
+                
+                <div >
+                    <h2 class="text-img2"><b>A fantasy new york </b></h2>
+                    <img src="imagenes/a fantasy new york 2.png" alt="" class="imagenes-2">          
+                </div>     
+                <div >
+                    <img src="imagenes/a fantasy sea monster 1.png" alt=""class="imagenes-3">
+                    <h2 class="text-img3"><b>A fantasy sea monster</b></h2>
+                </div>
+               
+            </div>
+        </section>
+
+          <script>
+          var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}</script>
+        <section>
+
+        </section>
+        <section>
+
+        </section>
+        <script>
+            var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+        </script>
+  
+    </main>
+    <footer  class="section2">
+
+        <div><img id="img-footer" src="imagenes/Live-Background.svg" alt="" style="width: 100%; height: 380px; bottom: -50px;"></div>
+       
+        <div class="redes">
+          <a href="twitter.com"><img src="imagenes/twitter.png" alt="" style="width: 20%;"></a> 
+           <a href="twitter.com"><img src="imagenes/instagram (1).png" alt="" style="width: 20%;"></a> 
+           <a href="twitter.com"><img src="imagenes/733547.png" alt="" style="width: 20%;"></a> </div> 
+         <!--   <div><h6 >riobamba-Ecuador</h6></div>  -->
+        </div> 
+    </footer>>
+        
+</body>
+</html>

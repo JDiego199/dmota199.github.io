@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button-gallery{
+                display: inline-block;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+    }
+        .btn1{
+            padding: 10px 30px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: rgb(34,107,183);
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px #999;
+    }   
+        .btn1:hover .btn2:hover {background-color: rgb(59, 145, 236)}
+
+
+        .btn1:active{
+            background-color:rgb(59, 145, 236);
+            box-shadow: 0 1px #666;
+            transform: translateY(4px);
+            }
+        .barra-top{
+            width: 100%;
+            height: 70px;
+            position: fixed;
+            top: 0;
+            background-color: rgb(62, 145, 201);
+            opacity: 90%;
+}
+        #more {display: none;}
+        body{
+            margin: 0;
+            background-color: #f1f1f1;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        header{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            font-size: 30px;
+            height: 250px; 
+            width: 100%;
+        }
+        .title{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .articulo1{
+            margin-left: 300px;
+            margin-right: 300px;
+            border: 2px solid rgb(81, 177, 221);
+        }
+        .section1{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .btn{
+            padding: 5px 300px;
+            margin-left: 240px;
+            font-size: 20px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: rgb(81, 177, 221);
+            border: none;
+            border-radius: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .btn1:hover {background-color: rgb(10, 129, 184);}
+
+        .btn1:active {
+            background-color:  rgb(81, 177, 221);
+        }
+        #more1 {display: none;}
+        .section2{
+        
+            display: inline-block;
+            font-size: 30px;
+            width: 100%;
+        }       
+        #img-footer{
+
+            position: relative;
+            transform: rotate(-180deg);
+        } 
+.redes{
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    right: 42%;
+    width: 10%;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="barra-top">
+           
+            <div class="title"><h1>Información</h1></div>
+                        
+            <div class="button-gallery">
+                <button class="btn1" onclick="location='index.html'" >Home</button>
+                <button  class="btn1" onclick="location='gallery.html'" >Galería</button>
+                <button  class="btn1" onclick="location='informacion.html'" >Información</button>
+       
+            </div>
+            
+        </div>
+        <div class="image">
+            <img src="imagenes/Live-Background.svg" alt="" style="width: 100%; height: 350px;">
+            </div>
+    </header>
+    
+    <article class="articulo1">
+        
+        <section class="section1">
+            <p>Estas imagenes son generadas con VQGAN+CLIP, 
+                que son dos modelos de inteligencia artificial que combinados son capaces de generar imágenes apartir de un texto de entrada.<span id="dots"></span><br><br>
+                <span id="more">   <b style="margin-left: 45%;">VQGAN + CLIP</b><br>
+                    <a href="https://compvis.github.io/taming-transformers/"><b>VQGAN</b></a> es una red generativa antagónica. Las Redes Neuronales Generativas Antagónicas (o Adversarias), también conocidas como GANs (Generative Adversarial Networks, en inglés), son una clase de algoritmos de inteligencia artificial que se utilizan en el aprendizaje no supervisado, implementadas por un sistema de dos redes neuronales que compiten mutuamente en una especie de juego de suma cero. Fueron presentadas por Ian Goodfellow et al. en 2014.<br><br>
+
+                    Esta técnica puede generar imágenes que parecen auténticas a observadores humanos. Por ejemplo, una imagen sintética de un gato que consiga engañar al discriminador (una de las partes funcionales del algoritmo), es probable que lleve a una persona cualquiera a aceptarlo como una fotografía real. La diferencia de VQGAN con redes GAN anteriores es que permite salidas en alta resolución. <br><br>
+
+                    <a href="https://openai.com/blog/clip/"><b>CLIP</b></a> (Contrastive Language Image Pretraining) es otra inteligencia artificial que permite transformar textos en imágenes. Es decir, en VQGAN+CLIP, CLIP introduce entradas de texto a VQGAN. Aquí te explicamos cómo usarlo.
+                </span></p>
+                <button onclick="myFunction()" class="btn" id="btn1">QUE ES VQGAN y CLIP?</button> 
+                <span id="dots1"></span><br><br>
+        
+                <span id="more1"> <br><br>  <b style="margin-left: 35%;">COMO GEGENERAR TUS PROPIAS IMAGENES</b><br><br>
+                    Entrando en  <a href="https://colab.research.google.com/drive/1go6YwMFe5MX6XM9tv-cnQiSTU50N9EeT#scrollTo=CppIQlPhhwhs&uniqifier=1"><b>VQGAN+CLIP (z+quantize method con augmentations).ipynb/b></b> </a> realizada en Google Colaboratory por Katherine Crowson puedes arrancar un modelo VQGAN preformateado con unos valores y combinado con un modelo CLIP. Aquí te explicamos cómo hacerlo funcionar. Si prefieres una explicación en vídeo lee los enlaces externos de esta página. El canal Cogitare en YouTube te muestra cómo usarlo y el canal Dot CSV cómo funciona de manera técnica. En el canal de discord de DotCSV siguen proponiendo correcciones diariamente al notebook. <br><br>
+                    <b>PASOS</b> <br>
+                    <ol>
+                        <li> Entra en <a href="https://colab.research.google.com/drive/1go6YwMFe5MX6XM9tv-cnQiSTU50N9EeT#scrollTo=CppIQlPhhwhs&uniqifier=1"><b>VQGAN+CLIP (z+quantize method con augmentations).ipynb/b></b> </a></li><br>
+                        <li> Arriba a la derecha pulsa en Conectar para que se te asigne una máquina.</li><br>
+                        <img src="imagenes/paso 2.PNG" alt="" style="width: 70%;"> <br><br><br>
+                        <li> En la página hay círculos negros con una flecha con apariencia de "Play". Pulsa en estos botones para ejecutar cada una de las celdas. Es recomendable esperar que se termine de ejercutar una celda para ir a la siguiente.</li> <br>
+                        <br>
+                        <li> Pulsa en la celda con el texto: Licensed under the MIT License.</li><br>
+                        <img src="imagenes/paso 4.PNG" alt="" style="width: 50%;"><br><br><br>
+                        <li> Cuando ejecutemos la celda con el texto: !nvidia-smi. Aquí aparecen los datos del PC remoto que va a ejecutar el modelo VQGAN+CLIP. La VRAM puede ser como ésta: 0MiB / 15109MiB. A más VRAM, más poder de renderizado. Con menos de 15109MiB podría no merecer la pena usar la máquina (tardando de media: 1 iteración 4 segundos, es decir, cuatro veces más que una de 15 GiB de RAM).</li><br>
+                        <img src="imagenes/paso 5.PNG" alt="" style="width: 50%"><br><br><br>
+                        <li> Pulsa en la celda con el texto: Instalación de bibliotecas. En esta celda se descargara e instalara las bibliotecas necesarias. Espera a que acabe de descargar para pasar a la siguiente</li><br>
+                        <img src="imagenes/paso 6.PNG" alt="" style="width: 50%"><br><br><br>
+                        <li>Pulsa en la celda con el texto: Selección de modelos a descargar. Puedes elegir descargar otros modelos pero el modelo por defecto imagenet_16384 es bueno. imagenet_1024 también es ligero. Time total, time spent, time left indican cuánto tiempo falta de descarga. Espera a que acabe de descargar para seguir.</li><br>
+                        <img src="imagenes/paso 7.PNG" alt="" style="width: 50%"> <br><br><br>
+                        <li> Pulsa en la celda con el texto: Carga de bibliotecas y definiciones.</li><br><br>
+                        <li> Antes de ejecutar la celda: parametros, tenemos que configurar los parametros que queremos que VQGAN + CLIP tenga como input para generar una imagen. <br><br>
+                        <img src="imagenes/paso 9.PNG" alt="" style="width: 50%"> <br><br><br>
+                        La IA está entrenada mucho más en inglés por lo que muchas veces el contexto es mejor introduciendo la entrada en inglés. <br><br>
+                        <li> Por ultimo ejecutamos la celda: Hacer la ejecución, según los parametros que hayamos ingresado la IA nos devolvera una imagen cada intervalo_imagenes antes ya configurado</li><br>
+                        <img src="imagenes/paso 10.PNG" alt=""  style="width: 50%"><br>
+                    </li>
+                    </ol>
+                </span></p>
+                <button onclick="myFunction2()" class="btn" id="btn2" style="padding-left: 220px; padding-right:220px;">COMO GENERAR TUS PROPIAS IMAGENES</button><br><br><br>
+        </section>
+    </article>
+
+    <script>
+        function myFunction() {
+            let dots = document.getElementById("dots");
+            let moreText = document.getElementById("more");
+            let btnText = document.getElementById("btn1");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                moreText.style.display = "none";
+                btnText.style.backgroundColor = "rgb(81, 177, 221)";
+            } else {
+                dots.style.display = "none";
+                moreText.style.display = "inline";
+                btnText.style.backgroundColor= "red";
+                btnText.style.backgroundColor = "#8C908C";
+            }
+        }
+    </script>
+        <script>
+            function myFunction2() {
+                let dots = document.getElementById("dots1");
+                let moreText = document.getElementById("more1");
+                let btnText = document.getElementById("btn2");
+    
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.style.backgroundColor = "rgb(81, 177, 221)";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.style.backgroundColor = "#8C908C";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+
+            <footer  class="section2">
+                <div>
+                    <img id="img-footer" src="imagenes/Live-Background.svg" alt="" style="width: 100%; height: 380px; bottom: -60px;">
+                </div>
+              
+                <div class="redes">
+                    <a href="twitter.com"><img src="imagenes/twitter.png" alt="" style="width: 20%;"></a> 
+                     <a href="twitter.com"><img src="imagenes/instagram (1).png" alt="" style="width: 20%;"></a> 
+                     <a href="twitter.com"><img src="imagenes/733547.png" alt="" style="width: 20%;"></a> </div> 
+              
+                  </div> 
+            </footer>>
+                
+</body>
+</html>
