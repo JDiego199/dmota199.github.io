@@ -1,0 +1,283 @@
+/* Create a sticky/fixed navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #1CA6E6;
+    padding: 90px 10px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    font-family: Century Gothic;;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius:30px ;
+    opacity: 90%;
+    box-shadow: 0px 0px 25px rgb(184, 183, 183);
+    font-size: 18px;
+  }
+  
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 25px;
+    border-radius: 4px;
+    font-family: Century Gothic;
+  }
+  
+  /* Style the logo */
+  #navbar #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+  }
+  
+  /* Links on mouse-over */
+  #navbar a:hover {
+    background-color:white;
+    color: black;
+  }
+  
+  /* Style the active/current link */
+  #navbar a.active {
+    background-color: #1494C7;
+    color: white;
+  }
+  
+  /* Display some links to the right */
+  #navbar-right {
+    float: right;
+  }
+  
+  /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+  @media screen and (max-width: 580px) {
+    #navbar {
+      padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+    #navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    #navbar-right {
+      float: none;
+    }
+  }
+.base{
+    position:absolute;
+    left: 45%;
+    top: 8px;
+  }
+body{
+
+    background-image: "/imagenes/low_poly_banner_design_1711.jpg";
+}
+main{
+    position: relative;
+    top: 300px;
+}
+  * {box-sizing: border-box}
+
+  
+  /* Style the tab */
+  .tab {
+    float: left;
+    position: relative;
+    top: 55px;
+    background-color: #71c5fd;
+    padding: 5px;
+    box-shadow: 0px 0px 25px rgb(184, 183, 183);
+    width: 16%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 15px 24px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: Century Gothic;
+    border-bottom-right-radius: 22px;
+    border-top-right-radius: 22px;
+    font-weight: bold;
+  }
+  .tab label{
+    font-weight: bold;
+    font-size: 22px;
+    font-family: Century Gothic;
+    width: 100%;
+    display: block;
+    background-color: inherit;
+    text-align: center;
+
+    color: ghostwhite;
+    
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgb(42, 159, 236);
+  }
+  
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: rgb(39, 124, 202);
+  }
+  
+  
+  /* Style the tab content */
+  .tabcontent {
+    height: 1042px;
+    position: relative;
+    float: right;
+    margin-right: 138px;
+    padding: 0px 120px;
+    width: 70%;
+    box-shadow: 0px 0px 25px rgb(184, 183, 183);
+    background-color: #EBD7B3;
+    font-size: 21px;
+    font-family: 'Inconsolata';
+    border-radius: 25px;
+    text-align: justify;
+    
+    
+  }
+  .tabcontent button{
+    position: relative;
+    background-color: rgb(252, 249, 249);
+    border: none;
+    color: black;
+    padding: 18px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 16px;
+    left: 465px;
+      font-family: 'Inconsolata';
+      font-size: 22px;
+    
+  }
+  .tabcontent button:hover {
+    background-color: #f1f1f1;
+  }
+    #ejercicio3 #resul-Eje3{
+      position: relative;
+      left: 450px;
+      font-size: 40px;
+  }
+  #ejercicio1 #resul-Eje1{
+    position: relative;
+    left: 450px;
+    font-size: 40px;
+}
+table{
+  border-collapse: collapse;
+}
+table, td, th {
+  border: 1px solid rgb(0, 0, 0);
+}
+.subtitle{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  padding-bottom: 20px;
+  top: -100px;
+
+}
+footer{
+  width: 1905px;
+  height: 50px;
+  bottom: -1500px;
+  position: relative;
+  display:inline-block;
+  background-color: #1CA6E6;
+  color: white;
+  text-align: center;
+
+  border-top-right-radius: 30px;
+  border-top-left-radius:30px ;
+  box-shadow: 0px 0px 25px rgb(184, 183, 183);
+  font-family: Century Gothic;
+  left: -400px;
+  opacity: 85%;
+}
+
+img{
+  
+  width: 50%;
+  float: right;
+  right: 0;
+}
+.text-subtitle{
+  position:absolute;
+  top: 250px;
+  left: 50px;
+}
+#texto3{
+    padding: 70px;
+    margin: 40px;
+    box-shadow: 0px 0px 30px rgb(187, 186, 186);
+    background-color: rgb(247, 239, 224);
+    font-size: 30px;
+    width:50%;
+    position: relative;
+    left: 20%;
+    height: 250px;
+    text-align: center;
+  }
+.resultado{
+  position: relative;
+  left: 250px;
+  font-size: 25px;
+  top: 100px;
+  font-weight: bold;
+  
+}
+#tabla1{
+  font-size: 15px;
+}
+#tabla2{
+  font-size: 18px;
+}
+#numO{
+  position: relative;
+  left: 45%;
+  height: 80px;
+  width: 80px;
+  font-size: 28px;
+  font-family: Century Gothic;;
+  text-align: center;
+}
+#spinner{
+    width: 50px;
+    height: 50px;
+  }
+
+#texto{
+  padding: 70px;
+    margin: 40px;
+    box-shadow: 0px 0px 30px rgb(187, 186, 186);
+    background-color: rgb(247, 239, 224);
+    font-size: 30px;
+    width:50%;
+    position: relative;
+    height: 50px;
+    text-align: center;
+    left: 20%;
+}
